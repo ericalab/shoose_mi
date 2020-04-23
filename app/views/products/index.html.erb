@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-3 col-sm-6">
+        <% @products.each do |product| %>
+            <a href="#" class="card card-product-grid">
+                <div class="img-wrap"><img src="assets/images/nike.jpg"></div>
+                <figcaption class="info-wrap">
+                    <p class="title text-truncate"><%= product.name%></p>
+                    <div class="price mt-2"><%= product.price %></div> 
+                </figcaption>
+            </a> 
+        <% end %>
+	</div> 
+</div> 
