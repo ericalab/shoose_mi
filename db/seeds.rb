@@ -8,8 +8,8 @@
 
 20.times do
     Product.create!(
-      name: Faker::Book.title,
+      name: Faker::Games::Pokemon.name,
       description: Faker::Lorem.paragraph(2),
-      price: Faker::Number.within(100..100000)
+      price: Faker::Number.within(2500..10000)
     )
 end
