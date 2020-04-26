@@ -1,0 +1,13 @@
+.card-product{
+  a.title{color:$dark; display: block;
+      &:hover{ color:$primary; }
+  }
+
+  .badge{  top: 10px; left: 10px; position: absolute;  }
+
+  p{margin-bottom: 0;}
+  .img-wrap{
+      overflow:hidden; position:relative;
+      img{ height:100%; max-width:100%; width:auto; display:inline-block; object-fit:cover;}
+  }
+}
