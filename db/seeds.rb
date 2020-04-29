@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-20.times do
-    Product.create!(
-      name: Faker::Games::Pokemon.name,
-      description: Faker::Lorem.paragraph(2),
-      price: Faker::Number.within(2500..10000)
-    )
+if Rails.env == 'development'
+  20.times do
+      Product.create!(
+        name: Faker::Games::Pokemon.name,
+        description: Faker::Lorem.paragraph(2),
+        price: Faker::Number.within(2500..10000)
+      )
+  end
 end
