@@ -19,3 +19,7 @@
 //= require script
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+    $('select').formSelect();
+});

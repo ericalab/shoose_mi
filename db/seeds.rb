@@ -10,8 +10,8 @@ if Rails.env == 'development'
   20.times do
       Product.create!(
         name: Faker::Games::Pokemon.name,
-        description: Faker::Lorem.paragraph(2),
-        price: Faker::Number.within(2500..10000)
+        description: Faker::Lorem.paragraph(sentence_count: 2),
+        price: Faker::Number.within(range: 2500..9980)
       )
   end
 end

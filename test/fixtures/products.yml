@@ -4,6 +4,7 @@
 #
 #  id          :bigint           not null, primary key
 #  description :text(65535)      not null
+#  image       :string(255)
 #  name        :string(255)      not null
 #  price       :integer          not null
 #  created_at  :datetime         not null
