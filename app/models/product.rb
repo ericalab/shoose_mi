@@ -15,6 +15,7 @@
 #  index_products_on_name  (name)
 #
 class Product < ApplicationRecord
+    include Hashid::Rails
     mount_uploader :image, ImageUploader
     validates :name, presence: true
     validates :description, presence: true
