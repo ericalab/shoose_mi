@@ -10,9 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-// = require jquery
-// = require jquery_ujs
-// = require popper
-// = require bootstrap-sprockets
+//= require jquery
+//= require jquery_ujs
+//= require jquery-2.0.0.min
+//= require bootstrap.bundle.min
+//= require popper
+//= require bootstrap-sprockets
+//= require script
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+    $('select').formSelect();
+});

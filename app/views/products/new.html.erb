@@ -1,0 +1,8 @@
+<%= simple_form_for @product do |f| %>
+    <h2>商品登録画面</h2>
+    <%= f.input :name, label: "商品名" %>
+    <%= f.input :description, label: "詳細" %>
+    <%= f.input :price, label: "価格" %>
+    <%= f.input :image, label: "商品画像", as: :file %>
+    <%= f.button :submit, "確認画面へ", :class => "btn-primary" %>
+<% end %>
