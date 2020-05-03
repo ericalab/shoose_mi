@@ -83,9 +83,10 @@
                             </div>
                     </div> <!-- col.// -->
                 </div> <!-- row.// -->
-
-                <a href="#" class="btn  btn-primary"> Buy now </a>
-                <a href="#" class="btn  btn-outline-primary"> <span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i>  </a>
+                <div class="btn btn-outline-primary">
+                        <%= link_to "買い物かごに入れる", product_add_to_baskets_path(@product), method: :post %>
+                        <i class="fas fa-shopping-cart"></i>
+                </div>
             </article> <!-- product-info-aside .// -->
 		</main> <!-- col.// -->
 	</div> <!-- row.// -->

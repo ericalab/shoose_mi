@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   resources :products, only: [:new, :show, :create] do
     scope module: :products do
-      resouces :add_to_baskets, only: [:create]
-      resouces :delete_in_baskets, only: [:create]
+      resources :add_to_baskets, only: [:create]
+      resources :delete_in_baskets, only: [:create]
     end
   end
 
