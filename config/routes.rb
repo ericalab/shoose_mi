@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'products#index'
 
+  resource :basket, only: [:show]
+
   resources :products, only: [:new, :show, :create] do
     scope module: :products do
       resources :add_to_baskets, only: [:create]
