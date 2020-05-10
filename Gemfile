@@ -44,6 +44,11 @@ gem 'carrierwave'
 gem 'kaminari'
 gem 'font-awesome-sass'
 gem "hashid-rails", "~> 1.0"
+# gem 'rails-i18n'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'pry-rails'
+gem 'rb-readline'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -71,4 +76,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
