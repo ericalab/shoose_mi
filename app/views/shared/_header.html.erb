@@ -1,79 +1,66 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="レスポンシブ・ナビゲーションバー">
-	<span class="navbar-toggler-icon"></span>
-	</button>
-	<a class="navbar-brand" href="#">Shoose Mi</a>
-	<div class="collapse navbar-collapse" id="Navber">
-  	<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-		<p>...</p>
-  	</ul>
-	<form class="form-inline my-2 my-lg-0">
-		<span class="widget-header dropdown mr-2">
-			<a href="#" data-toggle="dropdown" data-offset="20,10">
-				<i class="icon-sm rounded-circle border fa fa-user"></i>
-				<small class="text-muted">ログイン</small>
-				<span class="ml-2">My account <i class="fa fa-caret-down"></i></span>
-			</a>
-			<div class="dropdown-menu dropdown-menu-right">
-				<form class="px-4 py-3">
-					<div class="form-group">
-						<label>メールアドレス</label>
-						<input type="email" class="form-control" placeholder="email@example.com">
+	<div class="container">
+		<a class="navbar-brand" href="#" >Shoose Mi</a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="レスポンシブ・ナビゲーションバー">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="Navber">
+			<form action="#" class="search">
+				<div class="input-group w-100">
+					<input type="text" class="form-control" style="width:55%;" placeholder="Search">
+					<select class="custom-select" name="category_name">
+							<option value="">All type</option><option value="codex">Sneakers</option>
+							<option value="comments">Sandals</option>
+							<option value="content">Dress Shoes</option>
+					</select>
+					<div class="input-group-append">
+					<button class="btn btn-primary" type="submit">
+						<i class="fa fa-search"></i>
+					</button>
 					</div>
-					<div class="form-group">
-						<label>パスワード</label>
-						<input type="password" class="form-control" placeholder="Password">
-					</div>
-						<button type="submit" class="btn btn-primary">ログイン</button>
-				</form>
-				<hr class="dropdown-divider">
-				<a class="dropdown-item"><%= link_to "はじめてご利用の方", "#" %></a>
-				<a class="dropdown-item"><%= link_to "ID パスワードを忘れた方", "#" %></a>
-			</div> <!--  dropdown-menu .// -->
-			<a href="#" class="widget-header mr-2">
-				<i class="icon-sm rounded-circle border fa fa-shopping-cart"></i>
-				<span class="notify">0</span>
-			</a>
-			<a href="#" class="widget-header mr-2">
-				<i class="icon-sm rounded-circle border fa fa-heart"></i>
-			</a>
-		</span>
-	</form>
+				</div
+			</form> <!-- search-wrap .end// -->
+			<form class="form-inline my-2 my-lg-0">
+				<span class="widget-header dropdown mr-2">
+					<a href="#" data-toggle="dropdown" data-offset="20,10">
+						<i class="icon-sm rounded-circle border fa fa-user"></i>
+						<small class="text-muted">ログイン</small>
+						<span class="ml-2">My account <i class="fa fa-caret-down"></i></span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<form class="px-4 py-3">
+							<div class="form-group">
+								<label>メールアドレス</label>
+								<input type="email" class="form-control" placeholder="email@example.com">
+							</div>
+							<div class="form-group">
+								<label>パスワード</label>
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+								<button type="submit" class="btn btn-primary">ログイン</button>
+						</form>
+						<hr class="dropdown-divider">
+						<a class="dropdown-item"><%= link_to "はじめてご利用の方", "#" %></a>
+						<a class="dropdown-item"><%= link_to "ID パスワードを忘れた方", "#" %></a>
+					</div> <!--  dropdown-menu .// -->
+					<a href="#" class="widget-header mr-2">
+						<i class="icon-sm rounded-circle border fa fa-shopping-cart"></i>
+						<span class="notify">0</span>
+					</a>
+					<a href="#" class="widget-header mr-2">
+						<i class="icon-sm rounded-circle border fa fa-heart"></i>
+					</a>
+				</span>
+			</form>
+		</div>
+	</div>
 </nav>
+
 
 <header class="section-header">
 	<section class="header-top-light border-bottom">
 		<div class="container">
-			<nav class="d-flex flex-column flex-md-row">
-				<div class="col-lg-3 col-sm-4 col-12">
-					<div class="brand-wrap">
-						<%= link_to '/' , class: "image" do %>
-							<%= image_tag 'logo.png' ,class: "w-25" %>
-						<% end %>
-					</div> <!-- brand-wrap.// -->
-				</div>
-			</nav>
-				<ul class="nav mr-auto d-none d-md-flex">
-					<li><a href="#" class="nav-link px-2"> <i class="fab fa-facebook"></i> </a></li>
-					<li><a href="#" class="nav-link px-2"> <i class="fab fa-instagram"></i> </a></li>
-					<li><a href="#" class="nav-link px-2"> <i class="fab fa-twitter"></i> </a></li>
-				</ul>
-				<form action="#" class="search">
-					<div class="input-group w-100">
-						<input type="text" class="form-control" style="width:55%;" placeholder="Search">
-						<select class="custom-select" name="category_name">
-								<option value="">All type</option><option value="codex">Sneakers</option>
-								<option value="comments">Sandals</option>
-								<option value="content">Dress Shoes</option>
-						</select>
-						<div class="input-group-append">
-						<button class="btn btn-primary" type="submit">
-							<i class="fa fa-search"></i>
-						</button>
-						</div>
-					</div>
-				</form> <!-- search-wrap .end// -->
 				<ul class="nav">
 					<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Category </a>
 						<ul class="dropdown-menu dropdown-menu-right">
@@ -111,5 +98,4 @@
 			</nav>
 		</div>
 	</section>
-
 </header> <!-- section-header.// -->

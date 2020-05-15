@@ -1,21 +1,22 @@
-<h1>index page</h1>
+<div class="cotainer mx-5">
+    <h4 class="mt-3">アイテム一覧</h4>
+    <div class="row">
+        <% @products.each do |product| %>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <a href="/products/<%= product.hashid %>" class="card card-product-grid">
+                    <% if product.image.present? %>
+                        <div class="img-wrap"><%= image_tag product.image_url, class: "w-100" %></div>
+                    <% else %>
+                        <div class="img-wrap"><%= image_tag "nike.jpg" ,class: "w-100" %></div>
+                    <% end %>
+                    <figcaption class="info-wrap">
+                        <p class="title text-truncate"><%= product.name %></p>
+                        <div class="price mt-2"><%= product.price %>円</div> 
+                    </figcaption>
+                </a> 
+            </div> 
+        <% end %>
+    </div> 
+    <%= paginate @products %>
+</div>
 
-<div class="row">
-    <% @products.each do |product| %>
-        <div class="col-md-3 col-sm-6">
-            <a href="/products/<%= product.hashid %>" class="card card-product-grid">
-                <% if product.image.present? %>
-                    <div class="img-wrap"><%= image_tag product.image_url, class: "w-100" %></div>
-                <% else %>
-                    <div class="img-wrap"><%= image_tag "nike.jpg" ,class: "w-100" %></div>
-                <% end %>
-                <figcaption class="info-wrap">
-                    <p class="title text-truncate"><%= product.name %></p>
-                    <div class="price mt-2"><%= product.price %>円</div> 
-                </figcaption>
-            </a> 
-        </div> 
-    <% end %>
-</div> 
-
-<%= paginate @products %>
