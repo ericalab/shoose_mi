@@ -92,7 +92,24 @@
                         <p class="text-center mb-3">
                             <img src="bootstrap-ecommerce-html/images/misc/payments.png" height="26">
                         </p>
-                        <a href="#" class="btn btn-primary btn-block"> レジに進む </a>
+                        <%= form_tag charge_path do %>
+                            <% @products.each do |p| %>
+                                <%= hidden_field_tag "product_ids[]", p.id %>
+                            <% end %>
+                            <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key='pk_test_vgMJ40d5eW7ViEZccG06DmWN00jlqgeyv6'
+                            data-amount=<%= @total_price %>
+                            data-currency="jpy"
+                            data-name="テスト商品を購入"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="auto">
+                            </script>
+                            <script>
+                                document.getElementsByClassName("stripe-button-el")[0].style.display = 'none'; 
+                            </script>
+                            <button type="submit" class="yourCustomClass btn btn-primary btn-block">ご注文を確定する</button>
+                        <% end %>
                         <a href="#" class="btn btn-light btn-block">お買い物を続ける</a>
                 </div> <!-- card-body.// -->
             </div> <!-- card.// -->
