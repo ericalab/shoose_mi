@@ -1,100 +1,124 @@
-<div class="row">
-    <aside class="col-lg-9">
-        <div class="card">
-            <div class="table-responsive">
-                <table class="table table-borderless table-shopping-cart">
-                    <thead class="text-muted">
-                    <tr class="small text-uppercase">
-                        <th scope="col">Product</th>
-                        <th scope="col" width="120">Quantity</th>
-                        <th scope="col" width="120">Price</th>
-                        <th scope="col" class="text-right d-none d-md-block" width="200"> </th>
-                    </tr>
-                    </thead>
-                    
-                    <tbody>
-                        <% @products.each do |product| %>
-                            <tr>
-                                <td>
-                                    <figure class="itemside align-items-center">
-                                        <div class="aside"><img src="bootstrap-ecommerce-html/images/items/1.jpg" class="img-sm"></div>
-                                        <figcaption class="info">
-                                            <a href="#" class="title text-dark"><%= product.name %></a>
-                                            <p class="text-muted small">Model: E267 <br> Color: blue</p>
-                                        </figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <select class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <div class="price-wrap">
-                                        <var class="price"><%= product.price %>円</var>
-                                        <small class="text-muted"> -- each </small>
-                                    </div> <!-- price-wrap .// -->
-                                </td>
-                                <td class="text-right d-none d-md-block">
-                                <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                    <div class="btn btn-light"> 
-                                        <%= link_to "Remove", product_delete_in_baskets_path(product), method: :post, data: {confirm: '削除してもいいですか？'} %>
-                                    </div>
+<div class="container">
+    <div class="row">
+        <aside class="col-lg-9">
+            <div class="card">
+                <div class="table-responsive">
+                    <table class="table table-borderless table-shopping-cart">
+                        <thead class="text-muted">
+                        <tr class="small text-uppercase">
+                            <th scope="col">商品名</th>
+                            <th scope="col" width="120">個数</th>
+                            <th scope="col" width="120">価格</th>
+                            <th scope="col" class="text-right d-none d-md-block" width="200"> </th>
+                        </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <% @products.each do |product| %>
+                                <tr>
+                                    <td>
+                                        <figure class="itemside align-items-center">
+                                            <div class="aside">
+                                                <% if product.image.present? %>
+                                                    <div class="img-wrap"><%= image_tag product.image_url, class: "w-100" %></div>
+                                                <% else %>
+                                                    <div class="img-wrap"><%= image_tag "nike.jpg" ,class: "w-100" %></div>
+                                                <% end %>
+                                            </div>
+                                            <figcaption class="info">
+                                                <a href="#" class="title text-dark"><%= product.name %></a>
+                                                <p class="text-muted small">Model: E267 <br> Color: blue</p>
+                                            </figcaption>
+                                        </figure>
+                                    </td>
+                                    <td>
+                                        <select class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="price-wrap">
+                                            <var class="price"><%= product.price %>円</var>
+                                        </div> <!-- price-wrap .// -->
+                                    </td>
+                                    <td class="text-right d-none d-md-block">
+                                    <a data-original-title="欲しいものリストに追加" title="" href="" class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
+                                        <div class="btn btn-light"> 
+                                            <%= link_to "削除", product_delete_in_baskets_path(product), method: :post, data: {confirm: '削除してもいいですか？'} %>
+                                        </div>
                                     </a> 
-                               </td>
-                            </tr>
-                        <% end %>
-                    </tbody>
-                </table>
-            </div> <!-- table-responsive.// -->
+                                </td>
+                                </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
+                </div> <!-- table-responsive.// -->
 
-            <div class="card-body border-top">
-                <p class="icontext"><i class="icon text-success fa fa-truck"></i> Free Delivery within 1-2 weeks</p>
-            </div> <!-- card-body.// -->
-        </div> <!-- card.// -->
-    </aside> <!-- col.// -->
-    <aside class="col-lg-3">
-        <div class="card mb-3">
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label>Have coupon?</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="" placeholder="Coupon code">
-                            <span class="input-group-append">
-                                <button class="btn btn-primary">Apply</button>
-                            </span>
+                <div class="card-body border-top">
+                    <p class="icontext"><i class="icon text-success fa fa-truck"></i>  Free shipping!  配送料無料</p>
+                </div> <!-- card-body.// -->
+            </div> <!-- card.// -->
+        </aside> <!-- col.// -->
+
+        <aside class="col-lg-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label>クーポンコード</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="" placeholder="Coupon code">
+                                <span class="input-group-append">
+                                    <button class="btn btn-primary">適用</button>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div> <!-- card-body.// -->
-        </div> <!-- card.// -->
+                    </form>
+                </div> <!-- card-body.// -->
+            </div> <!-- card.// -->
 
-        <div class="card">
-            <div class="card-body">
-                    <dl class="dlist-align">
-                    <dt>Total price:</dt>
-                    <dd class="text-right">$69.97</dd>
-                    </dl>
-                    <dl class="dlist-align">
-                    <dt>Discount:</dt>
-                    <dd class="text-right text-danger">- $10.00</dd>
-                    </dl>
-                    <dl class="dlist-align">
-                    <dt>Total:</dt>
-                    <dd class="text-right text-dark b"><strong>$59.97</strong></dd>
-                    </dl>
-                    <hr>
-                    <p class="text-center mb-3">
-                        <img src="bootstrap-ecommerce-html/images/misc/payments.png" height="26">
-                    </p>
-                    <a href="#" class="btn btn-primary btn-block"> Make Purchase </a>
-                    <a href="#" class="btn btn-light btn-block">Continue Shopping</a>
-            </div> <!-- card-body.// -->
-        </div> <!-- card.// -->
-	</aside> <!-- col.// -->
-</div> <!-- row.// -->
-    
+            <div class="card">
+                <div class="card-body">
+                        <dl class="dlist-align">
+                        <dt>商品代金合計:</dt>
+                        <dd class="text-right"><%= @total_price %>円</dd>
+                        </dl>
+                        <dl class="dlist-align">
+                        <dt>割引:</dt>
+                        <dd class="text-right text-danger">- 2000円</dd>
+                        </dl>
+                        <dl class="dlist-align">
+                        <dt>注文合計:</dt>
+                        <dd class="text-right text-dark b"><strong>$59.97</strong></dd>
+                        </dl>
+                        <hr>
+                        <p class="text-center mb-3">
+                            <img src="bootstrap-ecommerce-html/images/misc/payments.png" height="26">
+                        </p>
+                        <%= form_tag charge_path do %>
+                            <% @products.each do |p| %>
+                                <%= hidden_field_tag "product_ids[]", p.id %>
+                            <% end %>
+                            <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key='pk_test_vgMJ40d5eW7ViEZccG06DmWN00jlqgeyv6'
+                            data-amount=<%= @total_price %>
+                            data-currency="jpy"
+                            data-name="テスト商品を購入"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="auto">
+                            </script>
+                            <script>
+                                document.getElementsByClassName("stripe-button-el")[0].style.display = 'none'; 
+                            </script>
+                            <button type="submit" class="yourCustomClass btn btn-primary btn-block">ご注文を確定する</button>
+                        <% end %>
+                        <a href="#" class="btn btn-light btn-block">お買い物を続ける</a>
+                </div> <!-- card-body.// -->
+            </div> <!-- card.// -->
+        </aside> <!-- col.// -->
+    </div> <!-- row.// -->
+</div>

@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: baskets
+# Table name: purchase_records
 #
 #  id         :bigint           not null, primary key
 #  created_at :datetime         not null
@@ -9,17 +9,16 @@
 #
 # Indexes
 #
-#  index_baskets_on_user_id  (user_id)
+#  index_purchase_records_on_user_id  (user_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (user_id => users.id)
 #
-class Basket < ApplicationRecord
-    has_many :basket_products, dependent: :destroy
-    has_many :products,through: :basket_products
+require 'test_helper'
 
-    def total_price
-        products.sum(:price) 
-    end
+class PurchaseRecordTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
