@@ -10,12 +10,7 @@ class ChargesController < ApplicationController
         basket_products = current_user.basket.basket_products.where(product_id: product_ids)
         basket_products.each(&:destroy!)
 
-        Stripe::Charge.create({
-          amount: total,
-          currency: 'jpy',
-          description: 'Example charge',
-          source: token
-        })
+        Charge.create!(total, token)
         redirect_to root_path, notice: '決済に成功しました'
     end
 end
