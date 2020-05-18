@@ -32,8 +32,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   has_one :basket, dependent: :destroy
+  has_one :purchase_record, dependent: :destroy
 
   def prepare_basket
     basket || create_basket
+  end
+
+  def prepare_purchase_record
+    purchase_record || create_purchase_record
   end
 end

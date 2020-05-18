@@ -18,7 +18,13 @@
                                 <tr>
                                     <td>
                                         <figure class="itemside align-items-center">
-                                            <div class="aside"><img src="bootstrap-ecommerce-html/images/items/1.jpg" class="img-sm"></div>
+                                            <div class="aside">
+                                                <% if product.image.present? %>
+                                                    <div class="img-wrap"><%= image_tag product.image_url, class: "w-100" %></div>
+                                                <% else %>
+                                                    <div class="img-wrap"><%= image_tag "nike.jpg" ,class: "w-100" %></div>
+                                                <% end %>
+                                            </div>
                                             <figcaption class="info">
                                                 <a href="#" class="title text-dark"><%= product.name %></a>
                                                 <p class="text-muted small">Model: E267 <br> Color: blue</p>
