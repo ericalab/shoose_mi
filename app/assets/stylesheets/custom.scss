@@ -45,3 +45,9 @@
   -webkit-text-stroke: initial;
   /* overflow: hidden; */
 }
+
+.jumbotron {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center 50%;
+}
