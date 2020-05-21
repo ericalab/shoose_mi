@@ -95,9 +95,6 @@
                         <dd class="text-right text-dark b"><strong>$59.97</strong></dd>
                         </dl>
                         <hr>
-                        <p class="text-center mb-3">
-                            <img src="bootstrap-ecommerce-html/images/misc/payments.png" height="26">
-                        </p>
                         <%= form_tag charge_path do %>
                             <% @products.each do |p| %>
                                 <%= hidden_field_tag "product_ids[]", p.id %>
@@ -112,8 +109,11 @@
                             data-locale="auto">
                             </script>
                             <script>
-                                document.getElementsByClassName("stripe-button-el")[0].style.display = 'none'; 
+                                document.addEventListener("load", function(){document.getElementsByClassName("stripe-button-el")[0].style.display = 'none'; })
                             </script>
+                            <style>
+                                .stripe-button-el{display:none}
+                            </style>
                             <button type="submit" class="yourCustomClass btn btn-primary btn-block">ご注文を確定する</button>
                         <% end %>
                         <a href="#" class="btn btn-light btn-block">お買い物を続ける</a>
