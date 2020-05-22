@@ -1,115 +1,127 @@
-<nav class="navbar navbar-dark bg-warning">
-	<span class="text-white mx-auto">￥6000以上お買い上げで送料無料</span>
-</nav>
+<nav class="fixed-top">
+	<nav class="navbar navbar-dark bg-warning">
+		<span class="text-white mx-auto">￥6000以上お買い上げで送料無料</span>
+	</nav>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-	<a class="navbar-brand" href="/">Shoose Mi</a>
+	<nav class="navbar navbar-dark bg-dark navbar-expand-md justify-content-between">
+		<div class="container-fluid">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+  		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+				<label for="openSidebarMenu" class="sidebarIconToggle">
+					<div class="spinner diagonal part-1"></div>
+					<div class="spinner horizontal"></div>
+					<div class="spinner diagonal part-2"></div>
+				</label>
+				
+				<div id="sidebarMenu">
+					<ul class="sidebarMenuInner">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								新着アイテム
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="#">WOMEN</a>
+								<a class="dropdown-item" href="#">MEN</a>
+								<a class="dropdown-item" href="#">KIDS</a>
+							</div>
+						</li>
 
-	<form action="#" class="form-inline">
-		<div class="input-group w-100">
-			<input type="text" class="form-control" style="width:55%;" placeholder="Search">
-			<div class="input-group-append">
-				<button class="btn btn-warning" type="submit">
-				<i class="fa fa-search"></i>
-			</button>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								カテゴリー </a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li id="accordion1"><a class="dropdown-item" data-toggle="collapse" data-target="#womenlist" aria-expanded="false" aria-controls="womenlist">WOMEN</a>
+									<ul class="collapse" id="womenlist" data-parent="#accordion1">
+										<li><a href="#">スニーカー</a></li>
+										<li><a href="#">パンプス</a></li>
+										<li><a href="#">サンダル</a></li>
+									</ul>
+								</li>
+								<li id="accordion2"><a class="dropdown-item" data-toggle="collapse" data-target="#menlist" aria-expanded="false" aria-controls="menlist">MEN</a>
+									<ul class="collapse" id="menlist" data-parent="#accordion2">
+										<li><a href="#">スニーカー</a></li>
+										<li><a href="#">スリッポン</a></li>
+										<li><a href="#">サンダル</a></li>
+									</ul>
+								</li>
+								<li id="accordion3"><a class="dropdown-item" data-toggle="collapse" data-target="#kidlist" aria-expanded="false" aria-controls="kidlist">KIDS</a>
+									<ul class="collapse" id="kidlist" data-parent="#accordion3">
+										<li><a href="#">スニーカー</a></li>
+										<li><a href="#">サンダル</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#">マイページ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">お気に入り</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">お買い物ガイド</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">お問い合わせ</a>
+						</li>
+					</ul>
+				</div>
 			</div>
+
+			<a href="/" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25">SHOOSE Mi</a>
 		</div>
-	</form>
 
-	<form class="form-inline my-2 my-lg-0">
-		<span class="widget-header dropdown mr-2">
-			<a href="#" data-toggle="dropdown">
-				<i class="icon-sm rounded-circle border fa fa-user"></i>
+		<div class="navbar-collapse collapse dual-nav w-50 order-2">
+			<form action="#" class="form-inline">
+				<div class="input-group w-100">
+					<input type="text" class="form-control" style="width:60%;" placeholder="Search">
+					<div class="input-group-append">
+						<button class="btn btn-warning" type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+					</div>
+				</div>
+			</form>
 
-				<span class="ml-2">ログイン<i class="fa fa-caret-down"></i></span>
+			<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ログイン
 			</a>
-			<div class="dropdown-menu dropdown-menu-right">
+			<div class="dropdown-menu">
 				<form class="px-4 py-3">
 					<div class="form-group">
-						<label>メールアドレス</label>
-						<input type="email" class="form-control" placeholder="email@example.com">
+					<label for="exampleDropdownFormEmail1">メールアドレス</label>
+					<input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
 					</div>
 					<div class="form-group">
-						<label>パスワード</label>
-						<input type="password" class="form-control" placeholder="Password">
+					<label for="exampleDropdownFormPassword1">パスワード</label>
+					<input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
 					</div>
-						<button type="submit" class="btn btn-warning">ログイン</button>
+					<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="dropdownCheck">
+					<label class="form-check-label" for="dropdownCheck">
+						Remember me
+					</label>
+					</div>
+					<button type="submit" class="btn btn-primary">ログイン</button>
 				</form>
-				<hr class="dropdown-divider">
-				<a class="dropdown-item"><%= link_to "はじめてご利用の方", "#" %></a>
-				<a class="dropdown-item"><%= link_to "ID パスワードを忘れた方", "#" %></a>
-			</div> <!--  dropdown-menu .// -->
-		</span>
-
-		<a href="/basket" class="widget-header mr-2">
-			<i class="icon-sm rounded-circle border fa fa-shopping-cart"></i>
-			<span class="notify">0</span>
-		</a>
-
-		<a href="#" class="widget-header mr-2">
-			<i class="icon-sm rounded-circle border fa fa-heart"></i>
-		</a>
-	</form>
-
-
-
-
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    	<span class="navbar-toggler-icon"></span>
-  	</button>
-	<div class="collapse navbar-collapse" id="navbarNavDropdown">
-		<ul class="navbar-nav">
-
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					新着アイテム
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" href="#">WOMEN</a>
-					<a class="dropdown-item" href="#">MEN</a>
-					<a class="dropdown-item" href="#">KIDS</a>
-				</div>
-			</li>
-
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
-					Category </a>
-				<ul class="dropdown-menu dropdown-menu-right">
-					<li id="accordion1"><a class="dropdown-item" data-toggle="collapse" data-target="#womenlist" aria-expanded="false" aria-controls="womenlist">WOMEN</a>
-						<ul class="collapse" id="womenlist" data-parent="#accordion1">
-							<li><a href="#">スニーカー</a></li>
-							<li><a href="#">パンプス</a></li>
-							<li><a href="#">サンダル</a></li>
-						</ul>
-					</li>
-					<li id="accordion2"><a class="dropdown-item" data-toggle="collapse" data-target="#menlist" aria-expanded="false" aria-controls="menlist">MEN</a>
-						<ul class="collapse" id="menlist" data-parent="#accordion2">
-							<li><a href="#">スニーカー</a></li>
-							<li><a href="#">スリッポン</a></li>
-							<li><a href="#">サンダル</a></li>
-						</ul>
-					</li>
-					<li id="accordion3"><a class="dropdown-item" data-toggle="collapse" data-target="#kidlist" aria-expanded="false" aria-controls="kidlist">KIDS</a>
-						<ul class="collapse" id="kidlist" data-parent="#accordion3">
-							<li><a href="#">スニーカー</a></li>
-							<li><a href="#">サンダル</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-
-			<li class="nav-item">
-				<a class="nav-link" href="#">マイページ</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">お気に入りアイテム</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">お買い物ガイド</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">お問い合わせ</a>
-			</li>
-		</ul>
-  	</div>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">はじめてご利用の方</a>
+				<a class="dropdown-item" href="#">パスワードをお忘れの方</a>
+			</div>
+			<div class="py-1 px-1">
+				<%= link_to("/basket") do %>
+					　<i class="fas fa-shopping-cart my-gray"></i>
+				<% end %>
+			</div>
+			<div class="py-1 px-1">
+				<%= link_to("#") do %>
+					　<i class="fas fa-heart my-gray"></i>
+				<% end %>
+			</div>
+		</div>
+	</nav>
 </nav>
