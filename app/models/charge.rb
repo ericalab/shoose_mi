@@ -15,5 +15,5 @@ class Charge
     def self.create!(price, token)
         charge = self.new
         charge.create!(price, token)
-      end
+    end
   end
