@@ -41,12 +41,14 @@ ActiveRecord::Schema.define(version: 2020_05_18_030841) do
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "admin_id", null: false
     t.string "name", null: false
     t.text "description", null: false
     t.integer "price", null: false
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_products_on_admin_id"
     t.index ["name"], name: "index_products_on_name"
   end
 
@@ -91,6 +93,7 @@ ActiveRecord::Schema.define(version: 2020_05_18_030841) do
   add_foreign_key "basket_products", "baskets"
   add_foreign_key "basket_products", "products"
   add_foreign_key "baskets", "users"
+  add_foreign_key "products", "admins"
   add_foreign_key "purchase_record_products", "products"
   add_foreign_key "purchase_record_products", "purchase_records"
   add_foreign_key "purchase_records", "users"

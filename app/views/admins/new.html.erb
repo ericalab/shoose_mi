@@ -1,4 +1,4 @@
-<%= simple_form_for @product do |f| %>
+<%= simple_form_for [:admins, @product] do |f| %>
     <h2>商品登録画面</h2>
     <%= f.input :name, label: "商品名" %>
     <%= f.input :description, label: "詳細" %>

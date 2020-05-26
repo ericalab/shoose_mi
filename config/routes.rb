@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'products#index'
@@ -7,11 +8,16 @@ Rails.application.routes.draw do
   resource :charge, only: [:create]
   
 
-  resources :products, only: [:new, :show, :create] do
+  resources :products, only: [:show] do
     scope module: :products do
       resources :add_to_baskets, only: [:create]
       resources :delete_in_baskets, only: [:create]
     end
+  end
+
+  namespace :admins do
+    root to: "dashboards#index"
+    resources :products, only: [:new, :create]
   end
 
   if Rails.env.development?
