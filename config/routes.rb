@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   resource :basket, only: [:show]
   resource :charge, only: [:create]
-  
 
   resources :products, only: [:show] do
     scope module: :products do
@@ -19,6 +18,12 @@ Rails.application.routes.draw do
     root to: "dashboards#index"
     resources :products, only: [:new, :create]
   end
+
+  # Rails.application.routes.draw do
+  #   devise_for :users, controllers: {
+  #     sessions: 'users/sessions'
+  #   }
+  # end
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: '/letter_opener'

@@ -25,8 +25,15 @@ class Admin < ApplicationRecord
   has_many :products, dependent: :destroy
 
   def sales
+    sold_products = products.joins(:purchase_record_products)
+    sold_products.sum(:price)
   end
 
   def sales_this_month
+    sold_products = products
+                        .joins(:purchase_record_products)
+                        .where({ purchase_record_products:  {created_at: Time.current.all_month}})
+    sold_products.total(:price)                     
   end
+
 end
