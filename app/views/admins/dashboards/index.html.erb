@@ -1,154 +1,38 @@
-<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-2" href="#">ShooseMi</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-  <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">
-      <%= link_to "ログアウト",destroy_admin_session_path, method: :delete, class: "nav-link"%>
-    </li>
-  </ul>
-</nav>
-
-<div class="container-fluid">
-  <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-      <div class="sidebar-sticky pt-1">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <span data-feather="home"></span>
-              ホーム <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              商品管理
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">商品マスター</a>
-              <a class="dropdown-item" href="#">商品登録</a>
-              <a class="dropdown-item" href="#">商品CSV登録</a>
-              <a class="dropdown-item" href="#">カテゴリCSV登録</a>
-            </div>
-          </li>
-
-
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart"></span>
-              受注状況
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              会員管理
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              コンテンツ管理
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              設定
-            </a>
-          </li>
-        </ul>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Dashboard</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group mr-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">出力する</button>
       </div>
-    </nav>
-
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group mr-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">出力する</button>
-          </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar"></span>
-            今週
-          </button>
-        </div>
-      </div>
-
-
-      <div class="card border-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header">総売上</div>
-        <div class="card-body text-dark">
-          <h5 class="card-title"><%= @total_price.to_i.to_s(:delimited) %></h5>
-          <p class="card-text">。。。</p>
-        </div>
-      </div>
-
-      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-
-
-      <h2>新規受注</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>日時</th>
-              <th>金額</th>
-              <th>商品名</th>
-              <th>個数</th>
-              <th>受注番号</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>6/3</td>
-              <td>4890円</td>
-              <td>スニーカー</td>
-              <td>1</td>
-              <td>00000099</td>
-            </tr>
-            <tr>
-              <td>6/3</td>
-              <td>7580円</td>
-              <td>サンダル</td>
-              <td>1</td>
-              <td>00000098</td>
-            </tr>
-            <tr>
-              <td>6/3</td>
-              <td>4890円</td>
-              <td>スニーカー</td>
-              <td>1</td>
-              <td>00000097</td>
-            </tr>
-            <tr>
-              <td>6/4</td>
-              <td>4890円</td>
-              <td>スニーカー</td>
-              <td>1</td>
-              <td>00000096</td>
-            </tr>
-            <tr>
-              <td>6/4</td>
-              <td>4890円</td>
-              <td>スニーカー</td>
-              <td>1</td>
-              <td>00000095</td>
-            </tr>
-            <tr>
-              <td>6/4</td>
-              <td>4890円</td>
-              <td>サンダル</td>
-              <td>1</td>
-              <td>00000094</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </main>
+      <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+        <span data-feather="calendar"></span>
+        今週
+      </button>
+    </div>
   </div>
-</div>
-      
+
+
+  <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">総売上</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title"><%= @total_price.to_i.to_s(:delimited) %>円</h5>
+      <p class="card-text">オーダー数：<%= @total_amount.to_i.to_s(:delimited) %></p>
+    </div>
+  </div>
+  <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">今日の売り上げ</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title"><%= @total_today.to_i.to_s(:delimited) %>円</h5>
+      <p class="card-text">オーダー数：<%= @total_amount_today.to_i.to_s(:delimited) %></p>
+    </div>
+  </div>
+  <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">今月の売上</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title"><%= @total_price_this_month.to_i.to_s(:delimited) %>円</h5>
+      <p class="card-text">オーダー数：<%= @total_amount_month.to_i.to_s(:delimited) %></p>
+    </div>
+  </div>
+</main>
+  

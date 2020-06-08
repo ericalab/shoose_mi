@@ -16,8 +16,14 @@
   </head>
 
   <body>
-  
-    <%= yield %>
+
+    <%= render partial: 'admins/shared/header' %>
+    <div class="container-fluid">
+      <div class="row">
+        <%= render partial: 'admins/shared/side_bar' %>
+        <%= yield %>
+      </div>
+    </div>
     
   </body>
 </html>

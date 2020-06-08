@@ -1,4 +1,12 @@
 class Admins::ProductsController < Admins::ApplicationController
+    def index
+      if params[:product].present?
+        @products = Product.where("id = ? OR name LIKE ?", params[:product][:id], params[:product][:name])
+      else
+        @products = Product.page(params[:page])
+      end
+    end
+
     def new
         @product = current_admin.products.build
     end

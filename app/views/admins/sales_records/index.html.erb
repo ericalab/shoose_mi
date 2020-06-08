@@ -1,0 +1,25 @@
+<div class="table-responsive col-md-9 ml-sm-auto col-lg-10 px-md-4">
+  <table class="table table-striped table-sm">
+  <h2>受注状況</h2>
+    <thead>
+      <tr>
+        <th>日時</th>
+        <th>商品名</th>
+        <th>金額</th>
+        <th>個数</th>
+        <th>受注番号</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @sold_products.each do |sold_product| %>
+        <tr>
+          <td><%= sold_product.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+          <td><%= sold_product.name %></td>
+          <td><%= sold_product.price %></td>
+          <td>sold_product.amount</td>
+          <td>00000099</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
