@@ -18,6 +18,8 @@
 //= require script
 //= require dashboard
 //= require turbolinks
+//= require chart
+//= require chart.bundle
 //= require_tree .
 
 $(document).ready(function(){

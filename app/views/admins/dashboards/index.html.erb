@@ -34,5 +34,38 @@
       <p class="card-text">オーダー数：<%= @total_amount_month.to_i.to_s(:delimited) %></p>
     </div>
   </div>
+  
+  <canvas id="myChart"></canvas>
+
+  <script>
+  <% test_data = [880, 740, 900, 520, 930] %>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+
+    data: {
+      labels: ["1月", "2月", "3月", "4月", "5月"],
+      datasets: [{
+          label: 'プリンター販売台数',
+          data: <%= test_data %>,
+          borderColor: 'rgba(255, 100, 100, 1)',
+          lineTension: 0,
+          fill: false,
+          borderWidth: 3
+      }]
+    },
+    
+    options: {
+      scales: {
+          yAxes: [{
+              ticks: {
+                  min: 300
+                  //beginAtZero: true
+              }
+          }]
+      }
+    }
+  });
+  </script>
 </main>
   

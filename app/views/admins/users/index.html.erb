@@ -10,11 +10,11 @@
             </tr>
         </thead>
         <tbody>
-            <％ @users.each do |@user| %>
+            <％ @users.each do |user| %>
                 <tr>
-                    <td><%= @user.id %></td>
-                    <td><%= @user.name %></td>
-                    <td><%= @user.email %></td>
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
                     <td>住所</td>
                 </tr>
             <% end %>
