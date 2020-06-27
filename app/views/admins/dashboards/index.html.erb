@@ -12,26 +12,27 @@
     </div>
   </div>
 
-
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
-    <div class="card-header">総売上</div>
-    <div class="card-body text-dark">
-      <h5 class="card-title"><%= @total_price.to_i.to_s(:delimited) %>円</h5>
-      <p class="card-text">オーダー数：<%= @total_amount.to_i.to_s(:delimited) %></p>
+  <div class="card-deck">
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">総売上</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title"><%= @total_price.to_i.to_s(:delimited) %>円</h5>
+        <p class="card-text">オーダー数：<%= @total_amount.to_i.to_s(:delimited) %></p>
+      </div>
     </div>
-  </div>
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
-    <div class="card-header">今日の売り上げ</div>
-    <div class="card-body text-dark">
-      <h5 class="card-title"><%= @total_today.to_i.to_s(:delimited) %>円</h5>
-      <p class="card-text">オーダー数：<%= @total_amount_today.to_i.to_s(:delimited) %></p>
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">今日の売り上げ</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title"><%= @total_today.to_i.to_s(:delimited) %>円</h5>
+        <p class="card-text">オーダー数：<%= @total_amount_today.to_i.to_s(:delimited) %></p>
+      </div>
     </div>
-  </div>
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
-    <div class="card-header">今月の売上</div>
-    <div class="card-body text-dark">
-      <h5 class="card-title"><%= @total_price_this_month.to_i.to_s(:delimited) %>円</h5>
-      <p class="card-text">オーダー数：<%= @total_amount_month.to_i.to_s(:delimited) %></p>
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">今月の売上</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title"><%= @total_price_this_month.to_i.to_s(:delimited) %>円</h5>
+        <p class="card-text">オーダー数：<%= @total_amount_month.to_i.to_s(:delimited) %></p>
+      </div>
     </div>
   </div>
   
