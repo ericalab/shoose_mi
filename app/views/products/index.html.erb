@@ -6,24 +6,21 @@
             <!-- スライドさせる画像の設定 -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <%= image_tag 'nike.jpg', class: "w-100" %>
+                        <%= image_tag 'sandal1.jpg', class: "w-100" %>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 "text-muted">第1スライド見出し</h5>
-                            <p>スライドイメージの紹介</p>
+                            <h5 "text-muted">Speing/Summer2020</h5>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <%= image_tag 'nike.jpg', class: "w-100" %>
+                        <%= image_tag 'sandal2.jpg', class: "w-100" %>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 "text-danger">第1スライド見出し</h5>
-                            <p>スライドイメージの紹介</p>
+                            <h5 "text-danger">Speing/Summer2020</h5>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <%= image_tag 'nike.jpg', class: "w-100" %>
+                        <%= image_tag 'sandal3.jpg', class: "w-100" %>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="text-dark">第1スライド見出し</h5>
-                            <p class="text-dark">スライドイメージの紹介</p>
+                            <h5 class="text-dark">Speing/Summer2020</h5>
                         </div>
                     </div>
                 </div>
@@ -32,12 +29,38 @@
     </div>
     <div class="row">
         <div class="col-3">
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#">ダッシュボード</a></li>
-                <li><a href="#">サーバー１</a></li>
-                <li><a href="#">サーバー２</a></li>
-                <li><a href="#">サーバー３</a></li>
-            </ul>
+            <div class="list-group">
+                <h4 class="mt-3">探す</h4>
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-light dropdown-toggle mb-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        WOMEN
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">スニーカー</a>
+                        <a class="dropdown-item" href="#">サンダル</a>
+                        <a class="dropdown-item" href="#">ヒール</a>
+                    </div>
+                </div>
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-light dropdown-toggle mb-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MEN
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">スニーカー</a>
+                        <a class="dropdown-item" href="#">サンダル</a>
+                        <a class="dropdown-item" href="#">ドレスシューズ</a>
+                    </div>
+                </div>
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        KIDS
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">スニーカー</a>
+                        <a class="dropdown-item" href="#">サンダル</a>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="col-9">
