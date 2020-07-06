@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.0'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '>= 3.12.6'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
@@ -50,6 +50,9 @@ gem 'devise-i18n-views'
 gem 'pry-rails'
 gem 'rb-readline'
 gem 'stripe'
+gem "activesupport", ">= 5.2.4.3"
+gem "actionpack", ">= 5.2.4.3"
+gem "activestorage", ">= 5.2.4.3"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
