@@ -1,10 +1,24 @@
-<%= simple_form_for [:admins, @product] do |f| %>
+<div class="table-responsive col-md-6 ml-sm-auto col-lg-10 px-md-4">
+  <%= form_with model: @product, url: admins_products_path do |f| %>
     <h2>商品登録画面</h2>
-    <%= f.input :id, label: "商品ID" %>
-    <%= f.input :name, label: "商品名" %>
-    カテゴリ
-    <%= f.input :description, label: "詳細" %>
-    <%= f.input :price, label: "価格" %>
-    <%= f.input :image, label: "商品画像アップロード", as: :file %>
-    <%= f.button :submit, "確認画面へ", :class => "btn-primary" %>
-<% end %>
+    <%= f.label :name, '商品名' %>
+    <%= f.text_field :name %><br>
+    <%= f.label :price, '価格' %>
+    <%= f.text_field :price %><br>
+    <%= f.label :"タイプ" %>
+    <%= f.select :gender_type, [["男性用", "men"], ["女性用", "women"],["ユニセックス", "unisex"]], prompt: "選択して下さい" %><br>
+    <%= f.label :"カテゴリ" %>
+    <%= f.select :category, [["スニーカー", "sneakers"], ["サンダル", "sandals"], ["ヒール", "heels"], ["ドレスシューズ", "dress-shoses"]], prompt: "選択して下さい" %><br>
+    <%= f.label :"色" %>
+    <%= f.select :color, [["黒", "black"], ["白", "white"], ["青", "blue"], ["赤", "red"], ["緑", "green"], ["ピンク", "pink"], ["ベージュ", "beige"]], prompt: "選択して下さい" %><br>
+    <%= f.label :"サイズ" %>
+    <%= f.select :size, 9..30, prompt: "選択して下さい" %><br>
+    <%= f.label :image, '商品画像' %>
+    <%= f.file_field :image %><br>
+    <%= f.label :description, '詳細' %>
+    <%= f.text_field :description %><br>
+    <%= f.label :stock, '個数' %>
+    <%= f.select :stock, 1..10, prompt: "選択して下さい" %><br>
+    <%= f.submit "登録" %>
+  <% end %>
+</div>

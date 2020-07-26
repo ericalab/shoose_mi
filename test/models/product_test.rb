@@ -6,11 +6,12 @@
 #  category    :string(255)
 #  color       :string(255)
 #  description :text(65535)      not null
+#  gender_type :string(255)
 #  image       :string(255)
 #  name        :string(255)      not null
 #  price       :integer          not null
 #  size        :integer
-#  type        :string(255)
+#  stock       :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  admin_id    :bigint           not null
