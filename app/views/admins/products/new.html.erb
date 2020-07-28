@@ -1,10 +1,10 @@
 <div class="table-responsive col-md-6 ml-sm-auto col-lg-10 px-md-4">
-  <%= form_with model: @product, url: admins_products_path do |f| %>
+  <%= form_with model: @product, url: admins_products_path ,local: true do |f| %>
     <h2>商品登録画面</h2>
     <%= f.label :name, '商品名' %>
     <%= f.text_field :name %><br>
     <%= f.label :price, '価格' %>
-    <%= f.text_field :price %><br>
+    <%= f.number_field :price %><br>
     <%= f.label :"タイプ" %>
     <%= f.select :gender_type, [["男性用", "men"], ["女性用", "women"],["ユニセックス", "unisex"]], prompt: "選択して下さい" %><br>
     <%= f.label :"カテゴリ" %>

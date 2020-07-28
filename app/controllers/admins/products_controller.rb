@@ -23,15 +23,22 @@ class Admins::ProductsController < Admins::ApplicationController
     end
 
     def edit
-      @product.attributes = flash[:board] if flash[:board]
+      @product = Product.find(params[:id])
     end
 
     def update
+      @product = Product.find(params[:id])
+      if @product.update_attributes(product_params)
+        redirect_to edit_admins_product_path, flash: { notice: "「#{@product.name}」の編集に成功しました。" }
+      else
+        render 'edit'
+      end
     end
 
     def destroy
+      @product = Product.find(params[:id])
       @product.destroy
-      redirect_to boards_path, flash: { notice: "「#{@product.name}」を削除しました。" }
+      redirect_to admins_products_path, flash: { notice: "「#{@product.name}」を削除しました。" }
     end
     
     private
