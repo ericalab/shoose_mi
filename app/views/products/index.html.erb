@@ -1,29 +1,25 @@
 <div class="top-container">
-    <div class="jumbotron">
+    <div class="jumbotron jumbotron-fluid">
         <div class="mx-auto" style="width: 300px;">
             <h1 class="display-３">NEW ITEM</h1>
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <!-- スライドさせる画像の設定 -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <%= image_tag 'nike.jpg', class: "w-100" %>
+                        <%= image_tag 'sandal1.jpg', class: "w-100" %>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 "text-muted">第1スライド見出し</h5>
-                            <p>スライドイメージの紹介</p>
+                            <h5 class="text-dark mt-4">Speing/Summer2020</h5>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <%= image_tag 'nike.jpg', class: "w-100" %>
+                        <%= image_tag 'sandal2.jpg', class: "w-100" %>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 "text-danger">第1スライド見出し</h5>
-                            <p>スライドイメージの紹介</p>
+                            <h5 class="text-dark">Speing/Summer2020</h5>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <%= image_tag 'nike.jpg', class: "w-100" %>
+                        <%= image_tag 'sandal3.jpg', class: "w-100" %>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="text-dark">第1スライド見出し</h5>
-                            <p class="text-dark">スライドイメージの紹介</p>
+                            <h5 class="text-dark">Speing/Summer2020</h5>
                         </div>
                     </div>
                 </div>
@@ -32,12 +28,38 @@
     </div>
     <div class="row">
         <div class="col-3">
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#">ダッシュボード</a></li>
-                <li><a href="#">サーバー１</a></li>
-                <li><a href="#">サーバー２</a></li>
-                <li><a href="#">サーバー３</a></li>
-            </ul>
+            <div class="list-group">
+                <h4 class="mt-3">探す</h4>
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-warning dropdown-toggle mb-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        WOMEN
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">スニーカー</a>
+                        <a class="dropdown-item" href="#">サンダル</a>
+                        <a class="dropdown-item" href="#">ヒール</a>
+                    </div>
+                </div>
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-warning dropdown-toggle mb-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MEN
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">スニーカー</a>
+                        <a class="dropdown-item" href="#">サンダル</a>
+                        <a class="dropdown-item" href="#">ドレスシューズ</a>
+                    </div>
+                </div>
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        KIDS
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">スニーカー</a>
+                        <a class="dropdown-item" href="#">サンダル</a>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="col-9">
@@ -47,9 +69,9 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                         <a href="/products/<%= product.hashid %>" class="card card-product-grid">
                             <% if product.image.present? %>
-                                <div class="img-wrap"><%= image_tag product.image_url, class: "w-100" %></div>
+                                <div class="img-wrap"><%= image_tag product.image_url, class: "item" %></div>
                             <% else %>
-                                <div class="img-wrap"><%= image_tag "nike.jpg" ,class: "w-100" %></div>
+                                <div class="img-wrap item"><p>画像なし</p></div>
                             <% end %>
                             <figcaption class="info-wrap">
                                 <p class="title text-dark"><%= product.name %></p>

@@ -48,7 +48,11 @@
 
 .jumbotron {
   background-image: url("background.png");
+<<<<<<< HEAD
+  background-size: 100%;
+=======
   background-size: cover;
+>>>>>>> master
   background-position: center 50%;
 }
 
@@ -104,7 +108,11 @@ body {
     margin-top: 60px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
+<<<<<<< HEAD
+    background: rgb(242, 146, 7)
+=======
     background: linear-gradient(180deg, rgb(242, 146, 7) 0%, #fff7ed 100%);
+>>>>>>> master
 }
 .sidebarMenuInner{
     margin:0;
@@ -140,7 +148,11 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
 input[type=checkbox] {
     transition: all 0.3s;
     box-sizing: border-box;
+<<<<<<< HEAD
+    /* display: none; */
+=======
     display: none;
+>>>>>>> master
 }
 .sidebarIconToggle {
     transition: all 0.3s;
@@ -211,4 +223,59 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-top: 100px;
     margin-right: 20px;
     margin-left: 20px;
+<<<<<<< HEAD
+}
+
+.parent-category{
+    color: black !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropright:hover .dropdown-menu {
+    display: block;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .checkbox {
+font-weight: 400;
+}
+
+.form-signin .form-control {
+position: relative;
+box-sizing: border-box;
+height: auto;
+padding: 10px;
+font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+z-index: 2;
+}
+
+.form-signin input[type="email"] {
+margin-bottom: -1px;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+margin-bottom: 10px;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+
+.item{
+    width: 230px;
+    height: 240px;
+=======
+>>>>>>> master
 }

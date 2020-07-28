@@ -3,16 +3,27 @@
 # Table name: products
 #
 #  id          :bigint           not null, primary key
+#  category    :string(255)
+#  color       :string(255)
 #  description :text(65535)      not null
+#  gender_type :string(255)
 #  image       :string(255)
 #  name        :string(255)      not null
 #  price       :integer          not null
+#  size        :integer
+#  stock       :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  admin_id    :bigint           not null
 #
 # Indexes
 #
-#  index_products_on_name  (name)
+#  index_products_on_admin_id  (admin_id)
+#  index_products_on_name      (name)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (admin_id => admins.id)
 #
 require 'test_helper'
 

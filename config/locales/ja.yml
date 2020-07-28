@@ -6,3 +6,7 @@ ja:
       previous: '前'
       next: '次'
       truncate: '...'
+  sign_in: "ログイン"
+  sign_up: "アカウント登録"
+  forgot_your_password: "パスワードを忘れましたか?"
+

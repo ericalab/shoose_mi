@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery-3.5.1.min
+//= require jquery_ujs
 //= require jquery
 //= require jquery_ujs
 //= require jquery-2.0.0.min
@@ -17,7 +19,10 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require script
+//= require dashboard
 //= require turbolinks
+//= require chart
+//= require chart.bundle
 //= require_tree .
 
 $(document).ready(function(){
