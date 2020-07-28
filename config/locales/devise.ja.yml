@@ -80,6 +80,7 @@ ja:
         sign_in: "ログイン"
         sign_in_with_provider: "%{provider}でログイン"
         sign_up: "アカウント登録"
+        resend_confirmation: "確認メールの再送"
     unlocks:
       new:
         resend_unlock_instructions: "アカウントの凍結解除方法を再送する"
