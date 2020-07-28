@@ -7,13 +7,13 @@
                     <div class="carousel-item active">
                         <%= image_tag 'sandal1.jpg', class: "w-100" %>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 "text-muted">Speing/Summer2020</h5>
+                            <h5 class="text-dark mt-4">Speing/Summer2020</h5>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <%= image_tag 'sandal2.jpg', class: "w-100" %>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 "text-danger">Speing/Summer2020</h5>
+                            <h5 class="text-dark">Speing/Summer2020</h5>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -69,9 +69,9 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                         <a href="/products/<%= product.hashid %>" class="card card-product-grid">
                             <% if product.image.present? %>
-                                <div class="img-wrap"><%= image_tag product.image_url, class: "w-100" %></div>
+                                <div class="img-wrap"><%= image_tag product.image_url, class: "item" %></div>
                             <% else %>
-                                <div class="img-wrap"><%= image_tag "nike.jpg" ,class: "w-100" %></div>
+                                <div class="img-wrap item"><p>画像なし</p></div>
                             <% end %>
                             <figcaption class="info-wrap">
                                 <p class="title text-dark"><%= product.name %></p>
