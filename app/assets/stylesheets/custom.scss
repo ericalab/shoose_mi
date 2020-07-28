@@ -104,7 +104,7 @@ body {
     margin-top: 60px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, rgb(242, 146, 7) 0%, #fff7ed 100%);
+    background: rgb(242, 146, 7)
 }
 .sidebarMenuInner{
     margin:0;
@@ -259,7 +259,6 @@ margin-bottom: 10px;
 border-top-left-radius: 0;
 border-top-right-radius: 0;
 }
-
 
 .item{
     width: 230px;
