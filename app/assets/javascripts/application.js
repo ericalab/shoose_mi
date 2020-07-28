@@ -13,8 +13,6 @@
 //= require jquery-3.5.1.min
 //= require jquery_ujs
 //= require jquery
-//= require jquery_ujs
-//= require jquery-2.0.0.min
 //= require bootstrap.bundle.min
 //= require popper
 //= require bootstrap-sprockets
