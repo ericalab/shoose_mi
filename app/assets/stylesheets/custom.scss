@@ -265,3 +265,18 @@ border-top-right-radius: 0;
     width: 230px;
     height: 240px;
 }
+
+.product-detail{
+  width: 75%;
+}
+
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+}
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .product-detail{
+    width: 100%;
+  }
+}
