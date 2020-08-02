@@ -1,0 +1,18 @@
+<div class="row">
+<% @products.each do |product| %>
+    <div class="col-md-3 col-sm-6 mb-3">
+        <a href="/products/<%= product.hashid %>" class="card card-product-grid">
+            <% if product.image.present? %>
+                <div class="img-wrap"><%= image_tag product.image_url, class: "item" %></div>
+            <% else %>
+                <div class="img-wrap item"><p>画像なし</p></div>
+            <% end %>
+            <figcaption class="info-wrap">
+                <p class="title text-dark"><%= product.name %></p>
+                <div class="price mt-2 text-darkgit "><%= product.price %>円</div> 
+            </figcaption>
+        </a> 
+    </div> 
+<% end %>
+</div>
+<%= paginate @products %>
