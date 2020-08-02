@@ -1,7 +1,7 @@
 <div class="top-container">
-  <div class="row">
+  <div class="row product-detail mx-auto">
     <aside class="col-lg-9">
-      <div class="card product-detail mx-auto">
+      <div class="card">
         <div class="table-responsive">
           <table class="table table-borderless table-shopping-cart">
             <thead class="text-muted">
@@ -89,7 +89,7 @@
             </dl>
             <dl class="dlist-align">
             <dt>注文合計:</dt>
-            <dd class="text-right text-dark b"><strong>$59.97</strong></dd>
+            <dd class="text-right text-dark b"><strong><%= @total_price %>円</strong></dd>
             </dl>
             <hr>
             <%= form_tag charge_path do %>
