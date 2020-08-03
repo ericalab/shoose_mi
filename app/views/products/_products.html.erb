@@ -1,6 +1,6 @@
 <div class="row">
 <% @products.each do |product| %>
-    <div class="col-md-3 col-sm-6 mb-3">
+    <div class="col-md-4 col-sm-6 mb-3">
         <a href="/products/<%= product.hashid %>" class="card card-product-grid">
             <% if product.image.present? %>
                 <div class="img-wrap"><%= image_tag product.image_url, class: "item" %></div>
