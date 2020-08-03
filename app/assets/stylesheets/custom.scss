@@ -48,11 +48,7 @@
 
 .jumbotron {
   background-image: url("background.png");
-<<<<<<< HEAD
   background-size: 100%;
-=======
-  background-size: cover;
->>>>>>> master
   background-position: center 50%;
 }
 
@@ -108,11 +104,7 @@ body {
     margin-top: 60px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-<<<<<<< HEAD
     background: rgb(242, 146, 7)
-=======
-    background: linear-gradient(180deg, rgb(242, 146, 7) 0%, #fff7ed 100%);
->>>>>>> master
 }
 .sidebarMenuInner{
     margin:0;
@@ -148,12 +140,9 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
 input[type=checkbox] {
     transition: all 0.3s;
     box-sizing: border-box;
-<<<<<<< HEAD
     /* display: none; */
-=======
-    display: none;
->>>>>>> master
 }
+
 .sidebarIconToggle {
     transition: all 0.3s;
     box-sizing: border-box;
@@ -223,7 +212,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-top: 100px;
     margin-right: 20px;
     margin-left: 20px;
-<<<<<<< HEAD
 }
 
 .parent-category{
@@ -276,6 +264,19 @@ border-top-right-radius: 0;
 .item{
     width: 230px;
     height: 240px;
-=======
->>>>>>> master
+}
+
+.product-detail{
+  width: 75%;
+}
+
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+}
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .product-detail{
+    width: 100%;
+  }
 }
