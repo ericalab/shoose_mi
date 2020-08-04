@@ -21,6 +21,7 @@
 //= require turbolinks
 //= require chart
 //= require chart.bundle
+//= require slick
 //= require_tree .
 
 $(document).ready(function(){
