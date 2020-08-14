@@ -3,12 +3,12 @@
 # Table name: products
 #
 #  id          :bigint           not null, primary key
-#  category    :string(255)
-#  color       :string(255)
-#  description :text(65535)      not null
-#  gender_type :string(255)
-#  image       :string(255)
-#  name        :string(255)      not null
+#  category    :string
+#  color       :string
+#  description :text             not null
+#  gender_type :string
+#  image       :string
+#  name        :string           not null
 #  price       :integer          not null
 #  size        :integer
 #  stock       :integer

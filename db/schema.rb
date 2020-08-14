@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2020_07_21_084625) do
 
-  create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -24,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_07_21_084625) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "basket_products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "basket_products", force: :cascade do |t|
     t.bigint "basket_id", null: false
     t.bigint "product_id", null: false
     t.datetime "created_at", null: false
@@ -33,14 +36,14 @@ ActiveRecord::Schema.define(version: 2020_07_21_084625) do
     t.index ["product_id"], name: "index_basket_products_on_product_id"
   end
 
-  create_table "baskets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "baskets", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_baskets_on_user_id"
   end
 
-  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
     t.bigint "admin_id", null: false
     t.string "name", null: false
     t.text "description", null: false
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_07_21_084625) do
     t.index ["name"], name: "index_products_on_name"
   end
 
-  create_table "purchase_record_products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "purchase_record_products", force: :cascade do |t|
     t.bigint "purchase_record_id", null: false
     t.bigint "product_id", null: false
     t.datetime "created_at", null: false
@@ -66,14 +69,14 @@ ActiveRecord::Schema.define(version: 2020_07_21_084625) do
     t.index ["purchase_record_id"], name: "index_purchase_record_products_on_purchase_record_id"
   end
 
-  create_table "purchase_records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "purchase_records", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_purchase_records_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
