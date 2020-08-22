@@ -12,11 +12,14 @@ services:
     tty: true
     stdin_open: true
   db:
-    image: mysql:5.7
-    volumes:
-      - db-volume:/var/lib/mysql
+    image: postgres
     environment:
-      MYSQL_ROOT_PASSWORD: password
-volumes:
-  db-volume:
+      POSTGRES_PASSWORD: secret
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data
 
+volumes:
+  postgresql-data:
+    driver: local
