@@ -25,9 +25,30 @@
 								新着アイテム
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="#">WOMEN</a>
-								<a class="dropdown-item" href="#">MEN</a>
-								<a class="dropdown-item" href="#">KIDS</a>
+                <ul class="dropdown-item">
+                  <li>
+                    <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+                      <%= f.hidden_field :gender_type, value: "women" %>
+                      <%= f.submit "WOMEN", class: "btn-warning" %>
+                    <% end %>
+                  </li>
+                </ul>
+                <ul class="dropdown-item">
+                  <li>
+                    <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+                      <%= f.hidden_field :gender_type, value: "men" %>
+                      <%= f.submit "MEN", class: "btn-warning" %>
+                    <% end %>
+                  </li>
+                </ul>
+                <ul class="dropdown-item">
+                  <li>
+                    <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+                      <%= f.hidden_field :gender_type, value: "kids" %>
+                      <%= f.submit "KIDS", class: "btn-warning" %>
+                    <% end %>
+                  </li>
+                </ul>
 							</div>
 						</li>
 
@@ -35,70 +56,70 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								カテゴリー </a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<li id="accordion1"><a class="dropdown-item parent-category" data-toggle="collapse" data-target="#womenlist" aria-expanded="false" aria-controls="womenlist">WOMEN</a>
-									<ul class="collapse dropdown-item" id="womenlist" data-parent="#accordion1">
+								<li id="accordion1"><a class="dropdown-item parent-category" data-toggle="collapse" data-target="#womenlist" aria-expanded="false" aria-controls="womenlist">WOMEN  <i class="fas fa-caret-down"></i></a>
+									<ul class="collapse" id="womenlist" data-parent="#accordion1">
 										<li>
 											<%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
 												<%= f.hidden_field :category, value: "sneakers" %>
 												<%= f.hidden_field :gender_type, value: "women" %>
-												<%= f.submit "スニーカー" %>
+												<%= f.submit "スニーカー", class: "btn-warning" %>
 											<% end %>
 										</li>
 										<li>
 											<%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
 												<%= f.hidden_field :category, value: "heels" %>
 												<%= f.hidden_field :gender_type, value: "women" %>
-												<%= f.submit "ヒール" %>
+												<%= f.submit "ヒール", class: "btn-warning" %>
 											<% end %>
 										</li>
                     <li>
                       <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
                       <%= f.hidden_field :category, value: "sandals" %>
                       <%= f.hidden_field :gender_type, value: "women" %>
-                      <%= f.submit "サンダル" %>
+                      <%= f.submit "サンダル", class: "btn-warning"%>
                     <% end %>
                     </li>
 									</ul>
 								</li>
-								<li id="accordion2"><a class="dropdown-item parent-category" data-toggle="collapse" data-target="#menlist" aria-expanded="false" aria-controls="menlist">MEN</a>
+								<li id="accordion2"><a class="dropdown-item parent-category" data-toggle="collapse" data-target="#menlist" aria-expanded="false" aria-controls="menlist">MEN  <i class="fas fa-caret-down"></i></a>
 									<ul class="collapse" id="menlist" data-parent="#accordion2">
                     <li>
                       <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
                         <%= f.hidden_field :category, value: "sneakers" %>
                         <%= f.hidden_field :gender_type, value: "men" %>
-                        <%= f.submit "スニーカー" %>
+                        <%= f.submit "スニーカー", class: "btn-warning"%>
                       <% end %>
                     </li>
                     <li>
                       <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
                         <%= f.hidden_field :category, value: "dress_shoes" %>
                         <%= f.hidden_field :gender_type, value: "men" %>
-                        <%= f.submit "ドレスシューズ" %>
+                        <%= f.submit "ドレスシューズ", class: "btn-warning" %>
                       <% end %>
                     </li>
                     <li>
                       <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
                         <%= f.hidden_field :category, value: "sandals" %>
                         <%= f.hidden_field :gender_type, value: "men" %>
-                        <%= f.submit "サンダル" %>
+                        <%= f.submit "サンダル", class: "btn-warning" %>
                       <% end %>
                     </li>
 									</ul>
 								</li>
-								<li id="accordion3"><a class="dropdown-item parent-category" data-toggle="collapse" data-target="#kidlist" aria-expanded="false" aria-controls="kidlist">KIDS</a>
+								<li id="accordion3"><a class="dropdown-item parent-category" data-toggle="collapse" data-target="#kidlist" aria-expanded="false" aria-controls="kidlist">KIDS  <i class="fas fa-caret-down"></i></a>
 									<ul class="collapse" id="kidlist" data-parent="#accordion3">
                     <li>
                       <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
                         <%= f.hidden_field :category, value: "sneakers" %>
                         <%= f.hidden_field :gender_type, value: "kids" %>
-                        <%= f.submit "スニーカー" %>
+                        <%= f.submit "スニーカー", class: "btn-warning" %>
                       <% end %>
                     </li>
                     <li>
                       <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
                         <%= f.hidden_field :category, value: "sandals" %>
                         <%= f.hidden_field :gender_type, value: "kids" %>
-                        <%= f.submit "サンダル" %>
+                        <%= f.submit "サンダル", class: "btn-warning" %>
                       <% end %>
                     </li>
 									</ul>
