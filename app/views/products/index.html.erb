@@ -34,30 +34,78 @@
           <button type="button" class="btn btn-warning dropdown-toggle mb-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               WOMEN
           </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">スニーカー</a>
-            <a class="dropdown-item" href="#">サンダル</a>
-            <a class="dropdown-item" href="#">ヒール</a>
-          </div>
+          <ul class="dropdown-menu">
+            <li>
+              <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+                <%= f.hidden_field :category, value: "sneakers" %>
+                <%= f.hidden_field :gender_type, value: "women" %>
+                <%= f.submit "スニーカー", class: "bg-white text-dark border-0" %>
+              <% end %>
+            </li>
+            <li>
+              <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+                <%= f.hidden_field :category, value: "heels" %>
+                <%= f.hidden_field :gender_type, value: "women" %>
+                <%= f.submit "ヒール", class: "bg-white text-dark border-0" %>
+              <% end %>
+            </li>
+            <li>
+              <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+              <%= f.hidden_field :category, value: "sandals" %>
+              <%= f.hidden_field :gender_type, value: "women" %>
+              <%= f.submit "サンダル", class: "bg-white text-dark border-0" %>
+            <% end %>
+            </li>
+          </ul>
         </div>
         <div class="btn-group dropright">
           <button type="button" class="btn btn-warning dropdown-toggle mb-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               MEN
           </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">スニーカー</a>
-            <a class="dropdown-item" href="#">サンダル</a>
-            <a class="dropdown-item" href="#">ドレスシューズ</a>
-          </div>
+          <ul class="dropdown-menu">
+            <li>
+              <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+                <%= f.hidden_field :category, value: "sneakers" %>
+                <%= f.hidden_field :gender_type, value: "men" %>
+                <%= f.submit "スニーカー", class: "bg-white text-dark border-0" %>
+              <% end %>
+            </li>
+            <li>
+              <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+                <%= f.hidden_field :category, value: "sandals" %>
+                <%= f.hidden_field :gender_type, value: "men" %>
+                <%= f.submit "サンダル", class: "bg-white text-dark border-0" %>
+              <% end %>
+            </li>
+            <li>
+              <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+              <%= f.hidden_field :category, value: "dress_shoes" %>
+              <%= f.hidden_field :gender_type, value: "men" %>
+              <%= f.submit "ドレスシューズ", class: "bg-white text-dark border-0" %>
+            <% end %>
+            </li>
+          </ul>
         </div>
         <div class="btn-group dropright">
           <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               KIDS
           </button>
-          <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">スニーカー</a>
-              <a class="dropdown-item" href="#">サンダル</a>
-          </div>
+          <ul class="dropdown-menu">
+            <li>
+              <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+                <%= f.hidden_field :category, value: "sneakers" %>
+                <%= f.hidden_field :gender_type, value: "kids" %>
+                <%= f.submit "スニーカー", class: "bg-white text-dark border-0" %>
+              <% end %>
+            </li>
+            <li>
+              <%= form_with scope: :search_product, url: search_product_path, method: :get do |f| %>
+                <%= f.hidden_field :category, value: "sandals" %>
+                <%= f.hidden_field :gender_type, value: "kids" %>
+                <%= f.submit "サンダル", class: "bg-white text-dark border-0" %>
+              <% end %>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
